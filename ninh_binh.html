@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ninh Bình — 21-22 Mar 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:#faf9f6;color:#2a2a2a;line-height:1.6;font-size:14px;}
+h1,h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;}
+a{color:#1a6b5a;}
+
+header{background:linear-gradient(135deg,#1a6b5a,#2d5aa0);color:#fff;padding:1rem 1.5rem;text-align:center;}
+header h1{font-size:1.3rem;letter-spacing:0.02em;}
+header p{opacity:0.8;font-size:0.78rem;margin-top:0.1rem;}
+.gs{font-size:0.75rem;color:#8a8580;vertical-align:super;text-decoration:none;margin-left:2px;}
+.gs:hover{color:#1a6b5a;}
+
+.w{max-width:620px;margin:0 auto;padding:0 1.25rem;}
+h2{font-size:1.25rem;margin:1.8rem 0 0.6rem;color:#1e1e1e;}
+h2:first-of-type{margin-top:1.5rem;}
+
+.tl{list-style:none;padding:0;}
+.tl li{display:grid;grid-template-columns:4.2rem 1fr;gap:0.5rem;padding:0.45rem 0;border-bottom:1px solid #edebe6;font-size:0.88rem;}
+.tl li:last-child{border:0;}
+.tl .t{font-weight:600;color:#1a6b5a;font-size:0.8rem;text-align:right;padding-top:0.08rem;}
+.tl b{color:#1e1e1e;}
+
+.note{background:#f4f2ed;border-radius:8px;padding:0.65rem 0.85rem;margin:1rem 0;font-size:0.82rem;color:#5a5550;}
+
+.map-box{border-radius:12px;overflow:hidden;border:1px solid #e8e5de;margin:0.6rem 0;}
+.map-box .leaflet-container{height:280px;width:100%;}
+
+footer{text-align:center;padding:1.5rem;color:#b0a99f;font-size:0.72rem;}
+.leaflet-popup-content-wrapper{border-radius:8px!important;box-shadow:0 3px 12px rgba(0,0,0,0.1)!important;}
+.leaflet-popup-content{font-family:'Inter',sans-serif!important;font-size:0.78rem!important;line-height:1.4!important;}
+.leaflet-popup-content strong{font-family:'DM Serif Display',serif;font-size:0.88rem;}
+.leaflet-popup-content a{color:#1a6b5a!important;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ninh Bình Weekend</h1>
+  <p>Sat 21 – Sun 22 March 2026</p>
+</header>
+
+<div class="w">
+
+<h2>Saturday</h2>
+<ul class="tl">
+  <li><div class="t">08:15</div><div>Leave <b>20 Hàng Vôi</b> → <a href="https://www.google.com/maps/dir/20+Hang+Voi,+Hoan+Kiem,+Hanoi/Hanoi+Railway+Station,+120+Le+Duan,+Hoan+Kiem,+Hanoi" target="_blank">Hanoi Station</a> (walk 25m / Grab 8m)</div></li>
+  <li><div class="t">08:55</div><div><b>Train SE5</b> → Ninh Bình · Coach 2, seats 3 & 4 · Bring ID</div></li>
+  <li><div class="t">~11:15</div><div>Arrive → Grab to <a href="https://www.booking.com/hotel/vn/tam-coc-bungalow.html" target="_blank">Tam Cốc Bungalow</a> · <a href="https://www.google.com/maps/dir/Ninh+Binh+Railway+Station/Tam+Coc+Bungalow,+Van+Lam,+Ninh+Hai,+Hoa+Lu,+Ninh+Binh" target="_blank">Directions</a></div></li>
+  <li><div class="t">~12:00</div><div><b>Lunch</b> in Tam Cốc · Goat w/ lime, scorched rice, bia hơi</div></li>
+  <li><div class="t">afternoon</div><div>Rent scooter, cruise around</div></li>
+  <li><div class="t">~16:30</div><div><b><a href="https://www.google.com/maps/place/Hang+Mua+Viewpoint/@20.2162,105.8517,15z" target="_blank">Hang Mua</a></b> — dragon viewpoint · 500 steps, sunset <a class="gs" href="https://www.google.com/search?tbm=isch&q=hang+mua+viewpoint+ninh+binh+sunset" target="_blank">pics</a></div></li>
+  <li><div class="t">evening</div><div>Wander Tam Cốc, riverside dinner <a class="gs" href="https://www.google.com/search?tbm=isch&q=tam+coc+village+evening+ninh+binh" target="_blank">pics</a></div></li>
+</ul>
+
+<h2>Sunday</h2>
+<ul class="tl">
+  <li><div class="t">~09:30</div><div><b><a href="https://www.google.com/maps/place/Trang+An+Scenic+Landscape+Complex/@20.2531,105.9189,14z" target="_blank">Tràng An</a></b> boat tour · ~2-3 hrs through caves · No booking needed <a class="gs" href="https://www.google.com/search?tbm=isch&q=trang+an+boat+tour+ninh+binh" target="_blank">pics</a></div></li>
+  <li><div class="t">~12:30</div><div><b>Lunch</b> near Tràng An or back in Tam Cốc</div></li>
+  <li><div class="t">~13:30</div><div>Pick one or two:
+    <br>· <a href="https://www.google.com/maps/place/Bich+Dong+Pagoda/@20.2050,105.8470,16z" target="_blank">Bích Đồng</a> — cliff pagoda, short bike ride <a class="gs" href="https://www.google.com/search?tbm=isch&q=bich+dong+pagoda+ninh+binh" target="_blank">pics</a>
+    <br>· <a href="https://www.google.com/maps/place/Thai+Vi+Temple/@20.2470,105.8906,16z" target="_blank">Thái Vi Temple</a> — quiet, uncrowded, scenic ride
+    <br>· Cycle the rice fields <a class="gs" href="https://www.google.com/search?tbm=isch&q=tam+coc+cycling+rice+fields" target="_blank">pics</a>
+  </div></li>
+  <li><div class="t">~15:45</div><div>Head to <a href="https://www.google.com/maps/place/Ninh+Binh+Railway+Station" target="_blank">Ninh Bình Station</a></div></li>
+  <li><div class="t">16:51</div><div><b>Train SE6</b> → Hà Nội · Coach 1, seats 31 & 32</div></li>
+  <li><div class="t">~19:10</div><div>Back in Hanoi</div></li>
+</ul>
+
+<div class="note">
+  Tràng An boat — no booking, buy at dock · Hang Mua — just show up · Bring passport, cash, sunscreen, closed shoes for the hike
+</div>
+
+<h2>Maps</h2>
+<div class="map-box"><div id="m1"></div></div>
+<div class="map-box"><div id="m2"></div></div>
+
+</div>
+<footer>Ninh Bình · March 2026</footer>
+
+<script>
+const T='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',A='© OSM · CARTO';
+function ic(n,c){return L.divIcon({html:`<div style="background:${c||'#1a6b5a'};width:20px;height:20px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;font-family:Inter,sans-serif">${n}</div>`,iconSize:[20,20],iconAnchor:[10,10],className:''});}
+
+const m1=L.map('m1',{scrollWheelZoom:false});
+L.tileLayer(T,{attribution:A,maxZoom:18}).addTo(m1);
+[{p:[21.0245,105.8542],n:'A',t:'Hàng Vôi',d:'Home',c:'#2d5aa0'},
+ {p:[21.0247,105.8412],n:'B',t:'Hanoi Station',d:'Gate A · 120 Lê Duẩn',c:'#c0392b'},
+ {p:[20.2525,105.9744],n:'C',t:'Ninh Bình Station',c:'#c0392b'},
+ {p:[20.2148,105.8598],n:'D',t:'Tam Cốc',d:'Hotel + activities',c:'#1a6b5a'}
+].forEach(m=>L.marker(m.p,{icon:ic(m.n,m.c)}).addTo(m1).bindPopup(`<strong>${m.n}. ${m.t}</strong>${m.d?'<br>'+m.d:''}`,{maxWidth:170}));
+L.polyline([[21.0247,105.8412],[20.2525,105.9744],[20.2148,105.8598]],{color:'#1a6b5a',weight:2,dashArray:'6,6',opacity:.5}).addTo(m1);
+m1.fitBounds([[21.04,105.82],[20.19,106.0]],{padding:[20,20]});
+
+const m2=L.map('m2',{scrollWheelZoom:false});
+L.tileLayer(T,{attribution:A,maxZoom:18}).addTo(m2);
+[{p:[20.2148,105.8598],n:1,t:'Bungalow',c:'#7c3aed'},
+ {p:[20.2162,105.8517],n:2,t:'Hang Mua',d:'Sat sunset',c:'#c0392b'},
+ {p:[20.2531,105.9189],n:3,t:'Tràng An',d:'Sun boat tour',c:'#2d5aa0'},
+ {p:[20.2050,105.8470],n:4,t:'Bích Đồng',d:'Sun optional',c:'#a07d1c'},
+ {p:[20.2525,105.9744],n:5,t:'Ninh Bình Station',d:'16:51 train',c:'#c0392b'},
+].forEach(m=>L.marker(m.p,{icon:ic(m.n,m.c)}).addTo(m2).bindPopup(`<strong>${m.n}. ${m.t}</strong>${m.d?'<br>'+m.d:''}`,{maxWidth:170}));
+L.polyline([[20.2148,105.8598],[20.2162,105.8517],[20.2148,105.8598],[20.2531,105.9189],[20.2050,105.8470],[20.2525,105.9744]],{color:'#1a6b5a',weight:2,dashArray:'5,5',opacity:.4}).addTo(m2);
+m2.fitBounds([[20.19,105.84],[20.26,105.98]],{padding:[25,25]});
+</script>
+</body>
+</html>
