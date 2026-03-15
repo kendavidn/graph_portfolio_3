@@ -9,13 +9,13 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',system-ui,sans-serif;background:#faf9f6;color:#2a2a2a;line-height:1.6;font-size:14px;}
+body{font-family:'Inter',system-ui,sans-serif;background:#fff;color:#2a2a2a;line-height:1.6;font-size:14px;}
 h1,h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;}
 a{color:#1a6b5a;}
 
-header{background:linear-gradient(135deg,#1a6b5a,#2d5aa0);color:#fff;padding:1rem 1.5rem;text-align:center;}
+header{background:linear-gradient(135deg,#5a6e3d,#8b7355);color:#fff;padding:1rem 1.5rem;text-align:center;}
 header h1{font-size:1.3rem;letter-spacing:0.02em;}
-header p{opacity:0.8;font-size:0.78rem;margin-top:0.1rem;}
+header p{opacity:0.85;font-size:0.78rem;margin-top:0.1rem;}
 .gs{font-size:0.75rem;color:#8a8580;vertical-align:super;text-decoration:none;margin-left:2px;}
 .gs:hover{color:#1a6b5a;}
 
@@ -33,6 +33,14 @@ h2:first-of-type{margin-top:1.5rem;}
 
 .map-box{border-radius:12px;overflow:hidden;border:1px solid #e8e5de;margin:0.6rem 0;}
 .map-box .leaflet-container{height:280px;width:100%;}
+.map-desc{font-size:0.8rem;color:#6b6560;margin:0.5rem 0 0.15rem;font-style:italic;}
+.map-legend{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;margin:0.4rem 0 1.4rem;font-size:0.78rem;color:#4a4540;}
+.map-legend span{display:inline-flex;align-items:center;gap:0.3rem;}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.15);flex-shrink:0;}
+
+.extras{margin:0.3rem 0 0.5rem;padding:0.5rem 0.75rem;background:#f9f7f4;border-radius:8px;font-size:0.8rem;color:#6b6560;line-height:1.7;}
+.extras strong{color:#4a4540;font-size:0.8rem;}
+.extras a{font-size:0.8rem;}
 
 footer{text-align:center;padding:1.5rem;color:#b0a99f;font-size:0.72rem;}
 .leaflet-popup-content-wrapper{border-radius:8px!important;box-shadow:0 3px 12px rgba(0,0,0,0.1)!important;}
@@ -52,36 +60,64 @@ footer{text-align:center;padding:1.5rem;color:#b0a99f;font-size:0.72rem;}
 
 <h2>Saturday</h2>
 <ul class="tl">
-  <li><div class="t">08:15</div><div>Leave <b>20 Hàng Vôi</b> → <a href="https://www.google.com/maps/dir/20+Hang+Voi,+Hoan+Kiem,+Hanoi/Hanoi+Railway+Station,+120+Le+Duan,+Hoan+Kiem,+Hanoi" target="_blank">Hanoi Station</a> (walk 25m / Grab 8m)</div></li>
+  <li><div class="t">08:15</div><div>Leave <b>20 Hàng Vôi</b> → <a href="https://www.google.com/search?q=Hanoi+Railway+Station+120+Le+Duan" target="_blank">Hanoi Station</a> (walk 25 minutes or taxi 8 minutes)</div></li>
   <li><div class="t">08:55</div><div><b>Train SE5</b> → Ninh Bình · Coach 2, seats 3 & 4 · Bring ID</div></li>
-  <li><div class="t">~11:15</div><div>Arrive → Grab to <a href="https://www.booking.com/hotel/vn/tam-coc-bungalow.html" target="_blank">Tam Cốc Bungalow</a> · <a href="https://www.google.com/maps/dir/Ninh+Binh+Railway+Station/Tam+Coc+Bungalow,+Van+Lam,+Ninh+Hai,+Hoa+Lu,+Ninh+Binh" target="_blank">Directions</a></div></li>
+  <li><div class="t">~11:15</div><div>Arrive → Grab to <a href="https://www.booking.com/hotel/vn/tam-coc-bungalow.html" target="_blank">Tam Cốc Bungalow</a> · <a href="https://www.google.com/search?q=directions+Ninh+Binh+Station+to+Tam+Coc+Bungalow" target="_blank">Directions</a></div></li>
   <li><div class="t">~12:00</div><div><b>Lunch</b> in Tam Cốc · Goat w/ lime, scorched rice, bia hơi</div></li>
   <li><div class="t">afternoon</div><div>Rent scooter, cruise around</div></li>
-  <li><div class="t">~16:30</div><div><b><a href="https://www.google.com/maps/place/Hang+Mua+Viewpoint/@20.2162,105.8517,15z" target="_blank">Hang Mua</a></b> — dragon viewpoint · 500 steps, sunset <a class="gs" href="https://www.google.com/search?tbm=isch&q=hang+mua+viewpoint+ninh+binh+sunset" target="_blank">pics</a></div></li>
+  <li><div class="t">~16:30</div><div><b><a href="https://www.google.com/search?q=Hang+Mua+Viewpoint+Ninh+Binh" target="_blank">Hang Mua</a></b> — dragon viewpoint · 500 steps, sunset <a class="gs" href="https://www.google.com/search?tbm=isch&q=hang+mua+viewpoint+ninh+binh+sunset" target="_blank">pics</a></div></li>
   <li><div class="t">evening</div><div>Wander Tam Cốc, riverside dinner <a class="gs" href="https://www.google.com/search?tbm=isch&q=tam+coc+village+evening+ninh+binh" target="_blank">pics</a></div></li>
 </ul>
+<div class="extras">
+  <strong>Also nearby:</strong>
+  <a href="https://www.google.com/search?q=Hoa+Lu+Ancient+Capital+Ninh+Binh" target="_blank">Hoa Lư Ancient Capital</a> · old temples, 15 min ride
+  · <a href="https://www.google.com/search?q=Tam+Coc+boat+ride+Ninh+Binh" target="_blank">Tam Cốc boat ride</a> · paddle through rice-field karsts
+  · <a href="https://www.google.com/search?q=Thung+Nham+Bird+Garden+Ninh+Binh" target="_blank">Thung Nham Bird Garden</a> · caves &amp; birds at dusk
+</div>
 
 <h2>Sunday</h2>
 <ul class="tl">
-  <li><div class="t">~09:30</div><div><b><a href="https://www.google.com/maps/place/Trang+An+Scenic+Landscape+Complex/@20.2531,105.9189,14z" target="_blank">Tràng An</a></b> boat tour · ~2-3 hrs through caves · No booking needed <a class="gs" href="https://www.google.com/search?tbm=isch&q=trang+an+boat+tour+ninh+binh" target="_blank">pics</a></div></li>
+  <li><div class="t">~09:30</div><div><b><a href="https://www.google.com/search?q=Trang+An+boat+tour+Ninh+Binh" target="_blank">Tràng An</a></b> boat tour · ~2-3 hrs through caves · No booking needed <a class="gs" href="https://www.google.com/search?tbm=isch&q=trang+an+boat+tour+ninh+binh" target="_blank">pics</a></div></li>
   <li><div class="t">~12:30</div><div><b>Lunch</b> near Tràng An or back in Tam Cốc</div></li>
   <li><div class="t">~13:30</div><div>Pick one or two:
-    <br>· <a href="https://www.google.com/maps/place/Bich+Dong+Pagoda/@20.2050,105.8470,16z" target="_blank">Bích Đồng</a> — cliff pagoda, short bike ride <a class="gs" href="https://www.google.com/search?tbm=isch&q=bich+dong+pagoda+ninh+binh" target="_blank">pics</a>
-    <br>· <a href="https://www.google.com/maps/place/Thai+Vi+Temple/@20.2470,105.8906,16z" target="_blank">Thái Vi Temple</a> — quiet, uncrowded, scenic ride
+    <br>· <a href="https://www.google.com/search?q=Bich+Dong+Pagoda+Ninh+Binh" target="_blank">Bích Đồng</a> — cliff pagoda, short bike ride <a class="gs" href="https://www.google.com/search?tbm=isch&q=bich+dong+pagoda+ninh+binh" target="_blank">pics</a>
+    <br>· <a href="https://www.google.com/search?q=Thai+Vi+Temple+Ninh+Binh" target="_blank">Thái Vi Temple</a> — quiet, uncrowded, scenic ride
     <br>· Cycle the rice fields <a class="gs" href="https://www.google.com/search?tbm=isch&q=tam+coc+cycling+rice+fields" target="_blank">pics</a>
   </div></li>
-  <li><div class="t">~15:45</div><div>Head to <a href="https://www.google.com/maps/place/Ninh+Binh+Railway+Station" target="_blank">Ninh Bình Station</a></div></li>
+  <li><div class="t">~15:45</div><div>Head to <a href="https://www.google.com/search?q=Ninh+Binh+Railway+Station" target="_blank">Ninh Bình Station</a></div></li>
   <li><div class="t">16:51</div><div><b>Train SE6</b> → Hà Nội · Coach 1, seats 31 & 32</div></li>
   <li><div class="t">~19:10</div><div>Back in Hanoi</div></li>
 </ul>
+<div class="extras">
+  <strong>Also nearby:</strong>
+  <a href="https://www.google.com/search?q=Van+Long+Nature+Reserve+Ninh+Binh" target="_blank">Vân Long Nature Reserve</a> · wetland boat ride, very peaceful
+  · <a href="https://www.google.com/search?q=Cuc+Phuong+National+Park+Ninh+Binh" target="_blank">Cúc Phương National Park</a> · primate centre, jungle trails
+  · <a href="https://www.google.com/search?q=Bai+Dinh+Pagoda+Ninh+Binh" target="_blank">Bái Đính Pagoda</a> · massive temple complex
+</div>
 
 <div class="note">
   Tràng An boat — no booking, buy at dock · Hang Mua — just show up · Bring passport, cash, sunscreen, closed shoes for the hike
 </div>
 
 <h2>Maps</h2>
+<p class="map-desc">Zoomed out — train route from Hanoi to Ninh Bình</p>
 <div class="map-box"><div id="m1"></div></div>
+<div class="map-legend">
+  <span><span class="dot" style="background:#2d5aa0"></span> Hàng Vôi (home)</span>
+  <span><span class="dot" style="background:#c0392b"></span> Hanoi Station</span>
+  <span><span class="dot" style="background:#c0392b"></span> Ninh Bình Station</span>
+  <span><span class="dot" style="background:#1a6b5a"></span> Tam Cốc (hotel)</span>
+</div>
+
+<p class="map-desc">Zoomed in — Tam Cốc area where we're staying</p>
 <div class="map-box"><div id="m2"></div></div>
+<div class="map-legend">
+  <span><span class="dot" style="background:#7c3aed"></span> Bungalow</span>
+  <span><span class="dot" style="background:#c0392b"></span> Hang Mua</span>
+  <span><span class="dot" style="background:#2d5aa0"></span> Tràng An</span>
+  <span><span class="dot" style="background:#a07d1c"></span> Bích Đồng</span>
+  <span><span class="dot" style="background:#c0392b"></span> Ninh Bình Station</span>
+</div>
 
 </div>
 <footer>Ninh Bình · March 2026</footer>
